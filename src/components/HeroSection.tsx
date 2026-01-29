@@ -1,5 +1,5 @@
 import Hero from './ui/animated-shader-hero';
-import { GenerativeArtScene } from './ui/anomalous-matter-hero';
+import FlowFieldBackground from './ui/flow-field-background';
 import { ArrowDown } from 'lucide-react';
 
 export default function HeroSection() {
@@ -26,10 +26,17 @@ export default function HeroSection() {
 
   return (
     <div className="relative min-h-screen lp-dual-energy" style={{ backgroundColor: 'var(--lp-bg-solid)' }}>
-      {/* 3D Morphing Wireframe Background */}
+      {/* Flow Field Particle Background */}
       <div className="absolute inset-0 w-full h-full z-0">
-        <GenerativeArtScene />
+        <FlowFieldBackground
+          color="#818cf8"
+          trailOpacity={0.15}
+          speed={1}
+          particleCount={600}
+        />
       </div>
+
+      {/* Flow Field is now the only background - removed competing 3D animation */}
 
       {/* Hero Content Layer */}
       <Hero

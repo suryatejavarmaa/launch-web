@@ -80,7 +80,7 @@
 
   :root,
   :host {
-    --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-sans: 'Poppins', sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     --color-red-400: oklch(.704 .191 22.216);
     --color-red-500: oklch(.637 .237 25.331);
@@ -487,6 +487,14 @@
   body {
     background-color: var(--background);
     color: var(--foreground);
+    font-family: 'Poppins', sans-serif !important;
+  }
+
+  /* Force Poppins font on EVERYTHING */
+  *,
+  *::before,
+  *::after {
+    font-family: 'Poppins', sans-serif !important;
   }
 
   :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) h1 {
